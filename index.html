@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        background: black;
+        font-family: sans-serif;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 30px;
+    }
+    .formstyle{
+        /* position: absolute; */
+        height: 800px;
+        width: 400px;
+        /* top: 100px;
+        left: 400px; */
+    }
+    input{
+        width: 80px;
+        color: black;
+        background: linear-gradient(#00ccff,#00ffcc);
+        padding: 10px 20px;
+        margin: 3px;
+        font-weight: bold;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    #ans{
+        width: 305px;
+        height: 80px;
+        text-align: center;
+    }
+    h2{ 
+        position: absolute;
+        top: -50px;
+        color: white;
+    }
+    .zz:hover{
+        box-shadow: 2px 0px 14px 1px white;
+    }
+</style>
+<body>
+    <div class="container">
+    <h2>Basic Calculator</h2>
+    <div class="formstyle">
+        <form name="forms">
+            <input type="text" name="answer" id="ans"><br>
+            <input class="zz" type="button" value=" ( " onclick="form.answer.value += '(' ">
+            <input class="zz" type="button" value=" ) " onclick="form.answer.value += ')' ">
+            <input class="zz" type="button" value="C" onclick="form.answer.value=null">
+            <input class="zz" type="button" value=" % " onclick="form.answer.value += '%' "><br>
+
+            <input class="zz" type="button" value=" 7 " onclick="form.answer.value += '7' ">
+            <input class="zz" type="button" value=" 8 " onclick="form.answer.value += '8' ">
+            <input class="zz" type="button" value=" 9 " onclick="form.answer.value += '9' ">
+            <input class="zz" type="button" value="  *" onclick="form.answer.value += '*' "><br>
+            
+            <input class="zz" type="button" value=" 4 " onclick="form.answer.value += '4' ">
+            <input class="zz" type="button" value=" 5 " onclick="form.answer.value += '5' ">
+            <input class="zz" type="button" value=" 6 " onclick="form.answer.value += '6' ">
+            <input class="zz" type="button" value="  -"  onclick="form.answer.value+='-'"><br>
+            
+            <input class="zz" type="button" value=" 1 " onclick="form.answer.value += '1' ">
+            <input class="zz" type="button" value=" 2 " onclick="form.answer.value += '2' ">
+            <input class="zz" type="button" value=" 3 " onclick="form.answer.value += '3' ">
+            <input class="zz" type="button" value=" +"  onclick="form.answer.value+='+'"> <br>
+
+
+            <input class="zz" type="button" value=" 0 " onclick="form.answer.value += '0' ">
+            <input class="zz" type="button" value=" . " onclick="form.answer.value += '.' ">
+            <input class="zz" type="button" value=" / " onclick="form.answer.value += '/' ">
+            <input class="zz" type="button" value=" = " onclick="form.answer.value = eval(form.answer.value)">
+        </form>
+    </div>
+</div>
+</body>
+</html>
